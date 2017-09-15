@@ -1,0 +1,410 @@
+@import "reset";
+@import "layout";
+@import "variable";
+
+// 项目全局样式
+body {
+  margin: 0;
+  height: 100%;
+  background: @background-color;
+}
+
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.no-border {
+  border:none !important;
+}
+.block {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.w200 {
+  width:200px !important;
+}
+.h80 {
+  height:80px;
+}
+.h100 {
+  height:100px;
+}
+.mt20 {
+  margin-top:20px !important;
+}
+.mt30 {
+  margin-top:30px !important;
+}
+.mt45 {
+  margin-top:40px !important;
+}
+.mt84 {
+  margin-top:84px !important;
+}
+.mb45 {
+  margin-bottom:45px !important;
+}
+.pt40 {
+  padding-top:40px !important;
+}
+.pb40 {
+  padding-bottom:40px !important;
+}
+.f18 {
+  font-size: 18px !important;
+}
+.f20 {
+  font-size: 20px !important;
+}
+.f24 {
+  font-size: 24px !important;
+}
+.f26 {
+  font-size: 26px !important;
+}
+.f28 {
+  font-size: 28px !important;
+}
+.f30 {
+  font-size: 30px !important;
+}
+.f32 {
+  font-size: 32px !important;
+}
+.white-color {
+  color:#fff;
+}
+.main-color {
+  color:#212121;
+}
+.main-color1 {
+  color:#212121!important;
+}
+.blue-color {
+  color: #2196F3;
+}
+.blue-color1 {
+  color:#23A9F6;
+}
+.orange-color {
+  color: #E67E22 !important;
+}
+.orange1-color {
+  color: #ff9800;
+}
+.gray-color {
+  color: #757575 !important;
+}
+.gray2-color {
+  color: #8A8A8A !important;
+}
+.bg-white {
+  background: #fff;
+}
+.bg-blue {
+  background: #2196F3;
+}
+.bg-orange {
+  background: #E67E22;
+}
+.bg-green {
+  background: #2ECC71;
+}
+.bg-gray {
+  background: #D8D8D8;
+}
+.spacing {
+  margin-top:12px !important;
+}
+.zhanwei {
+  height:96px;
+}
+// 项目全局样式 end
+
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../assets/font/iconfont.eot');
+  /* IE9*/
+  src: url('../../assets/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../assets/font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../../assets/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../../assets/font/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family: "iconfont";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  vertical-align: middle;
+}
+
+
+//标题栏
+.bar-nav {
+  font-size: 36px;
+  height: 88px;
+  line-height: 88px;
+  color:#FFFFFF;
+  background-color: @bannerbgColor;
+  overflow: hidden;
+  .iconfont {
+    font-size: 40px;
+    margin-top: 0;
+    margin-left: 4px;
+  }
+  .title {
+    position: absolute;
+    left: 15%;
+    display: block;
+    width: 70%;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+}
+
+//信息列表
+.msg-list {
+  li {
+    border-bottom: 1px solid @borderColor;
+    &>* {
+      color: @mainColor;
+      font-size: 28px;
+    }
+    select {
+      margin-right: 10px;
+      direction: rtl;
+      option {
+        direction: ltr;
+      }
+    }
+    input {
+      margin-right: 10px;
+      text-align: right;
+    }
+    .left-input {
+      margin-right: 0!important;
+      text-align: left;
+    }
+    &:after {
+      font-family: "iconfont";
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      vertical-align: middle;
+      content: "\e627";
+      color: #757575;
+      font-size: 30px;
+    }
+    &.noicon:after{
+      content: ''!important;
+    }
+  }
+
+}
+
+//底部导航
+section.footer_nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1030;
+  text-align: center;
+  height: 96px;
+  // border:2px solid #D8D8D8;
+}
+
+// 遮罩
+.alertPopbg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 1040;
+}
+
+// 遮罩内容框
+.AlertDiv {
+  position: absolute;
+  width: 84%;
+  left: 8%;
+  padding: 40px;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 10000;
+}
+
+// 按钮组们
+.btn {
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+  font-size: 32px;
+  border: none;
+}
+.btn-bottom {
+  border-radius: 0 !important;
+}
+.btn-blue {
+  background: @blueColor;
+  color: #fff;
+}
+.btn-gray {
+  background: @grayColor;
+  color: @mainColor;
+}
+.btn-green {
+  background: @greenColor;
+  color: #fff;
+}
+.btn-orange {
+  background: #FF9800;
+  color: #fff;
+}
+.box80 { //按钮盒子
+  margin:0 80px;
+  border-radius: 10px;
+  font-size: 32px;
+}
+.two-btn { // 一行两个按键
+  &>* {
+    border-radius: 10px !important;
+    width:40% !important;
+  }
+}
+
+
+// 左边固定 后缀为字数
+.fix-left3 {
+  width:140px !important;
+}
+.fix-left4 {
+  width: 180px;
+}
+.fix-left5 {
+  width:200px;
+}
+
+// li三种高度
+.lineBig {
+  li {
+    min-height: 122px;
+    line-height: 122px;
+  }
+}
+.lineSmall {
+  li {
+    min-height: 102px;
+    line-height: 102px;
+  }
+}
+.lineSmaller {
+  li {
+    min-height: 88px;
+    line-height: 88px;
+  }
+}
+.liBig {
+  min-height: 102px !important;
+  line-height: 102px !important;
+}
+
+.noborder-ul {
+  li {
+    border: none !important;
+  }
+}
+
+.noicon-ul {
+  li:after {
+    content: '';
+  }
+
+}
+
+
+// 美化单选按钮
+.check-div {
+  position: relative;
+  .check-img {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+  }
+  input[type="checkbox"] {
+    z-index: 100;
+  }
+
+  /*将原checkbox使其不显示*/
+  input[type="checkbox"]{
+    -webkit-appearance: none ;
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.radio-div {
+  position: relative;
+  width:60px;
+  .check-img {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+  }
+  input[type="radio"] {
+    z-index: 100;
+  }
+
+  /*将原checkbox使其不显示*/
+  input[type="radio"]{
+    -webkit-appearance: none ;
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.cancelButton {
+  cursor: not-allowed;
+}
+.sendButton {
+  cursor: pointer;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}

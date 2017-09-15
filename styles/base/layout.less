@@ -1,0 +1,66 @@
+// 布局样式
+/**
+ * layout
+ *
+ * 说明
+ * l:layout
+ * r:row
+ * l:left
+ * r:right
+ * c:center
+ */
+
+//优化
+[class^="l-r"] {
+  // TODO l-r-lr 覆盖 l-item-link
+  // 不能使用 !important 导致 DOM 隐藏问题
+  display: flex;
+  /*
+  & > * {
+      display: block;
+  }
+  */
+
+  // 1行内元素平分
+  /*
+  &[class^="l-r-auto"] {
+      flex: 1;
+  }
+  */
+
+  // 1行内元素平分
+  &[class^="l-r-auto"] {
+    & > * {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  // 主轴为水平方向，起点在右端
+  &[class^="l-r-r"] {
+    flex-direction: row-reverse;
+  }
+
+  // 1行2列两边对齐
+  &[class^="l-r-lr"] {
+    justify-content: space-between;
+  }
+
+  // l_auto:占用剩下的
+  .l_auto {
+    flex: 1;
+  }
+}
+
+// 垂直水平居中对齐
+.l-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 垂直居中对齐
+.l-c {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,5 @@
+.idea
+/node_modules
+/templates/layout.html
+/output/templates/layout.html
+/dist
